@@ -21,14 +21,20 @@ class ChoosedImageActivity : AppCompatActivity(), GalleryAdapter.GalleryListener
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_choosed_image)
         setupAdapter()
-//        val actionBar = supportActionBar
-//        actionBar!!.setDisplayHomeAsUpEnabled(true)
+        var toolbar: androidx.appcompat.widget.Toolbar
+        toolbar = findViewById(R.id.toolbar)
+        setSupportActionBar(toolbar)
+        supportActionBar!!.title = "Выбранные фотографии"
+
+        supportActionBar!!.setDisplayHomeAsUpEnabled(true)
+        supportActionBar!!.setDisplayShowHomeEnabled(true)
+        
     }
 
-//    override fun onSupportNavigateUp(): Boolean {
-//        onBackPressed()
-//        return true
-//    }
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressed()
+        return true
+    }
 
 
     private fun setupAdapter() {
