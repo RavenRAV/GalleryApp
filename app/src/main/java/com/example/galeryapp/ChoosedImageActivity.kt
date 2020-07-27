@@ -28,7 +28,7 @@ class ChoosedImageActivity : AppCompatActivity(), GalleryAdapter.GalleryListener
 
         supportActionBar!!.setDisplayHomeAsUpEnabled(true)
         supportActionBar!!.setDisplayShowHomeEnabled(true)
-        
+
     }
 
     override fun onSupportNavigateUp(): Boolean {
